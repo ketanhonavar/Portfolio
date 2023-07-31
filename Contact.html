@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="co.css">
+<body>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact Me</h1>
+                    <p> ketan21h@gmail.com</p>
+                    <p>7338525473 /  7019837436</p>
+                    <div  class="social-icons">
+                        
+                        <a href="https://www.linkedin.com/in/ketan-honavar-12950019a"><img src="linkedin.png   " alt=""></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxwJptLbrVLslHHpsnpftNkBSptXhzKFXDhrMjKHjjsFrKzZPFZJjtjJRfMGKWVmKDcDfm"><img src="gmail.png" alt=""></a>
+                        <a href="https://wa.link/82ly9c"><img src="whatsapp.png" alt=""></a>
+                    </div>
+                    <button class="btn btn2"><a href="Word Resume2.(Previous).pdf"  download>Download Resume</a></button>
+                </div>
+                <div class="contact-right">
+                    
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name"   placeholder="Your Name">
+                        <input type="email" name="Email"   placeholder="Your Email">
+                        <textarea name="Message"  rows="6"  placeholder="Your Message"></textarea>
+                        <button  type="submit" class="btn btn2">  submit</button>
+                        <button  type="submit" class="btn btn2"  onclick="window.location.reload()">  Reload</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+      
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxFeJqcIYLY6GMVR1xIDwmuDmaCr1hTbhXIGrM2UAo5Pl0lc9iIt_tjuxGXEx6NTm0a/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="Ab.css">
+<body>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="profile .jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an aspiring Full Stack Java Developer, I have worked on project like: Registration Form, Calculator,
+                        PhotoSlider and  paralex Website (Details on the portfolio page). Lokking for an opportunity where i can 
+                        find a stimulation learning environment for developing and putting into newideas and experiences.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents  active-tab" id="skills">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>JQ</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>Nov 2022- Feb 2023</span> Full Stack Java Developer From GIT</li>
+                                <li><span>Aug 2018- jul 2022</span> Rural Engineering College Hulkoti <br>With CGPA of 7.31</li>
+                                <li><span>Jun 2015- Apr 2018</span> Chetan P.U College Hubli <p>With a percentage of 52%</p></li>
+                                <li><span>Jun 2014- Apr 2015 </span> New English School Honavar <p>with percentage of 77%</p></li>
+                                
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tabliks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tabliks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
